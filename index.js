@@ -1,7 +1,7 @@
 /*this is where our js content is gonna start from*/
             //OuR DOM elements will go here lol//
         function addFood() {
-             const JSON_SERVER_URL = 'http://localhost:3000'; // Our local storage for data for daily logins obvi
+             const JSON_SERVER_URL ="https://json-server-xzcy.onrender.com/";// Our local storage for data for daily logins 
              const foodSearchInput = document.getElementById('food-search');
              const totalCaloriesSpan = document.getElementById('total-calories');
              const totalProteinSpan = document.getElementById('total-protein');
