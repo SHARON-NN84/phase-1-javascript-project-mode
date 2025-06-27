@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HEALTH & NUTRITIONAL TRACKER</title>
+    <title>Nutrition Tracker</title>
     <style>
         * {
             margin: 0;
@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #e60cee 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
         }
@@ -25,7 +25,7 @@
 
         h1 {
             text-align: center;
-            color: rgb(19, 18, 18);
+            color: white;
             margin-bottom: 30px;
             font-size: 2.5rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
@@ -38,23 +38,21 @@
             margin-bottom: 25px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.1);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255,255,255,0.2);
         }
         
-        /* First card gets slightly different styling */
         .card:first-child {
             border-radius: 18px;
             padding: 30px;
         }
         
-        /* Third card variation */
         .card:nth-child(3) {
             margin-bottom: 30px;
             padding: 20px 25px;
         }
 
         .card h2 {
-            color: #c905f0;
+            color: #333;
             margin-bottom: 20px;
             font-size: 1.8rem;
         }
@@ -67,17 +65,16 @@
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
-            color: #6c06f0;
+            color: #555;
         }
         
-        /* Mix up label styling */
         label:first-child {
             margin-bottom: 10px;
-            font-weight: 300;
+            font-weight: 700;
         }
         
         label:nth-child(odd) {
-            color: #444444;
+            color: #444;
         }
 
         input, select {
@@ -89,13 +86,12 @@
             transition: all 0.3s ease;
         }
         
-        /* Some inputs get different styling */
-        #searchBox {
+        #foodSearch {
             border-radius: 15px;
             padding: 14px;
         }
         
-        #portion {
+        #servingSize {
             border-radius: 8px;
         }
         
@@ -197,7 +193,6 @@
             align-items: center;
         }
         
-        /* Add some variation to food items */
         .food-item:nth-child(odd) {
             border-radius: 10px;
             padding: 16px 15px;
@@ -278,13 +273,14 @@
             border: 1px solid #e1e1e1;
             border-radius: 12px;
             margin-top: 10px;
+            display: none;
         }
 
         .search-item {
             padding: 15px;
             border-bottom: 1px solid #e1e1e1;
             cursor: pointer;
-            transition:0.3s ease;
+            transition: background 0.3s ease;
         }
 
         .search-item:hover {
@@ -295,8 +291,22 @@
             border-bottom: none;
         }
 
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
         @media (max-width: 768px) {
-            .summary-grid {
+            .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             
@@ -310,9 +320,9 @@
         }
     </style>
 </head>
-</body>
+<body>
     <div class="container">
-        <h1>Nutritional tracker</h1>
+        <h1>🥗 HEALTH AND NUTRITION TRACKER</h1>
         
         <div class="card">
             <h2>Search Foods</h2>
@@ -385,16 +395,12 @@
         <div class="card">
             <h2>Today's Food Log</h2>
             <div id="foodLog">
-                <p style="text-align: center; color: #666666; padding: 20px;">No foods added yet. Start tracking your nutrition!</p>
+                <p style="text-align: center; color: #666666; padding: 20px;">Loading food log...</p>
             </div>
             <button class="btn danger" onclick="clearFoodLog()">Clear Food Log</button>
         </div>
     </div>
- 
+
     <script src="./index.js"></script>
 </body>
 </html>
-
-
-
-    
