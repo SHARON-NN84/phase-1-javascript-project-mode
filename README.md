@@ -71,7 +71,7 @@ json-server --watch db.json # Assuming your data file is named db.json
 
 Experience the Health and Nutrition Tracker live on GitHub Pages:
 
-https://[MumbiShalonGitHubUsername].github.io/health-nutrition-tracker/
+https://[SHARON-NN84].github.io/health-nutrition-tracker/
 
 (Note: This link will only work once the project is deployed to GitHub Pages. Remember to replace the placeholder with the actual URL.)
 
