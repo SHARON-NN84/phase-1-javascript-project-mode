@@ -34,8 +34,8 @@ Clone the repository:
 
 Bash
 
-git clone https://github.com/[MumbiShalonGitHubUsername]/health-nutrition-tracker.git
-(Note: Replace [MumbiShalonGitHubUsername] with Mumbi Shalon's actual GitHub username, and health-nutrition-tracker with the exact repository name.)
+git clone https://github.com/[SHARON-NN84GitHub]/health-nutrition-tracker.git
+
 
 Navigate to the project directory:
 
